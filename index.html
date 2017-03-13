@@ -78,9 +78,9 @@ limitations under the License.
 
         // handler for the CastMessageBus message event
         window.messageBus.onMessage = function(event) {
-          console.log('Message [' + event.senderId + ']: ' + event.data);
+          // console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
-          displayText(event.data);
+          displayText(JSON.stringify(event));
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
           window.messageBus.send(event.senderId, event.data);
@@ -94,7 +94,7 @@ limitations under the License.
       // utility function to display the text message in the input field
       function displayText(text) {
         console.log(text);
-        document.getElementById("message").innerHTML=text;
+        document.getElementById("message").innerHTML = text;
         window.castReceiverManager.setApplicationState(text);
       };
     </script>
