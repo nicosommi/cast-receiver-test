@@ -37,7 +37,8 @@ limitations under the License.
     <title>Cast Hello Text</title>
   </head>
   <body>
-	  <div id="message" style="width: 100vw; height: 100vh;">Habla conmigo</div>
+	  <div id="message" style="width: 100vw; height: 100vh; white-space: normal;">Habla conmigo</div>
+    <div id="data" style="width: 100vw; height: 100vh; white-space: normal;">Data will be here</div>
     <script type="text/javascript" src="//www.gstatic.com/cast/sdk/libs/receiver/2.0.0/cast_receiver.js"></script>
     <script type="text/javascript">
       window.onload = function() {
@@ -84,6 +85,7 @@ limitations under the License.
           // console.log('Message [' + event.senderId + ']: ' + event.data);
           // display the message from the sender
           displayText(JSON.stringify(event));
+          document.getElementById("data").innerHTML = JSON.stringify(event.data);
           // inform all senders on the CastMessageBus of the incoming message event
           // sender message listener will be invoked
           window.messageBus.send(event.senderId, event.data);
