@@ -1,0 +1,46 @@
+
+
+
+    
+    .icon {
+        width: 648px;
+        height: 858px;
+      background-image: url('sprite.png');
+      background-position: -0px -0px;
+    }
+
+
+    .icon.icon-anim {
+      -webkit-animation: icon-play calc(26s / 24) steps(26) infinite;
+         -moz-animation: icon-play calc(26s / 24) steps(26) infinite;
+          -ms-animation: icon-play calc(26s / 24) steps(26) infinite;
+           -o-animation: icon-play calc(26s / 24) steps(26) infinite;
+              animation: icon-play calc(26s / 24) steps(26) infinite;
+    }
+
+    @-webkit-keyframes icon-play {
+       from { background-position:    0px; }
+         to { background-position: -22308px; }
+    }
+
+    @-moz-keyframes icon-play {
+       from { background-position:    0px; }
+         to { background-position: -22308px; }
+    }
+
+    @-ms-keyframes icon-play {
+       from { background-position:    0px; }
+         to { background-position: -22308px; }
+    }
+
+    @-o-keyframes icon-play {
+       from { background-position:    0px; }
+         to { background-position: -22308px; }
+    }
+
+    @keyframes icon-play {
+       from { background-position:   -0px -0px; }
+         to { background-position: -0px -22308px; }
+    }
+
+
